@@ -1,0 +1,12 @@
+.app__dropdown,
+.app__dropdown:hover,
+.app__dropdown:focus {
+  background-color: white;
+}
+
+.app__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}

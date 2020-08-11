@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import AppHeader from "./Components/AppHeader/AppHeader";
 
 function App() {
+  const [countriesList, setCountriesList] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState("worldwide");
+
+  useEffect(() => {
+    (async () => {
+      const url = "https://disease.sh/v3/covid-19/countries";
+
+      await fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          const countries = data.map((country) => {
+            return {
+              country: country.country,
+              countryCode: country.countryInfo.iso2,
+            };
+          });
+          setCountriesList(countries);
+        });
+    })();
+  }, []);
+
+  const changeCountry = (event) => {
+    const newCountry = event.target.value;
+    setSelectedCountry(newCountry);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <AppHeader
+        selectedCountry={selectedCountry}
+        handleDropdownSelect={changeCountry}
+        countriesList={countriesList}
+      />
     </div>
   );
 }
