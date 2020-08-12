@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./InfoCard.module.css";
 import { Card, CardContent, Typography } from "@material-ui/core";
 
-function InfoCard({ title, color, casesToday, totalCases }) {
+const InfoCard = ({ title, color, casesToday, totalCases }) => {
   return (
     <Card className={styles.card}>
       <CardContent>
@@ -14,6 +14,6 @@ function InfoCard({ title, color, casesToday, totalCases }) {
       </CardContent>
     </Card>
   );
-}
+};
 
 export default InfoCard;

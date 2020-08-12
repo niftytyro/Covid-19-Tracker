@@ -3,7 +3,7 @@ import styles from "./CardsRow.module.css";
 import InfoCard from "../InfoCard/InfoCard";
 import { KformatLargeNumbers } from "../../utils";
 
-function CardsRow({ countryData }) {
+const CardsRow = ({ countryData }) => {
   return (
     <div className={styles.row}>
       <InfoCard
@@ -32,6 +32,6 @@ function CardsRow({ countryData }) {
       />
     </div>
   );
-}
+};
 
 export default CardsRow;

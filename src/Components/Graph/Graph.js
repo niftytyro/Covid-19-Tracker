@@ -18,7 +18,7 @@ const generateDataset = (countriesData) => {
   return [labels, datapoints];
 };
 
-function Graph({ countryCode }) {
+const Graph = ({ countryCode }) => {
   const [labels, setLabels] = useState([]);
   const [datapoints, setDatapoints] = useState([]);
   useEffect(() => {
@@ -67,6 +67,6 @@ function Graph({ countryCode }) {
       options={{ responsive: true, maintainAspectRatio: true }}
     />
   );
-}
+};
 
 export default Graph;

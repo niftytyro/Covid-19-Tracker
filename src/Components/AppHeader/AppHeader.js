@@ -2,7 +2,11 @@ import React from "react";
 import { Select, FormControl, MenuItem } from "@material-ui/core";
 import styles from "./AppHeader.module.css";
 
-function AppHeader({ selectedCountry, handleDropdownSelect, countriesList }) {
+const AppHeader = ({
+  selectedCountry,
+  handleDropdownSelect,
+  countriesList,
+}) => {
   return (
     <div className={styles.app__header}>
       <h1>COVID-19 TRACKER</h1>
@@ -25,6 +29,6 @@ function AppHeader({ selectedCountry, handleDropdownSelect, countriesList }) {
       </FormControl>
     </div>
   );
-}
+};
 
 export default AppHeader;

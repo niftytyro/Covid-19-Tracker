@@ -4,12 +4,15 @@ import AppHeader from "./Components/AppHeader/AppHeader";
 import CardsRow from "./Components/CardsRow/CardsRow";
 import RankedTable from "./Components/RankedTable/RankedTable";
 import Graph from "./Components/Graph/Graph";
+import CovidMap from "./Components/CovidMap/CovidMap";
 import { KsortByCases } from "./utils";
 
-function App() {
+const App = () => {
   const [countriesList, setCountriesList] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("worldwide");
   const [selectedCountryData, setSelectedCountryData] = useState({});
+  const [lat, setLat] = useState(0);
+  const [long, setLong] = useState(0);
 
   useEffect(() => {
     (async () => {
@@ -21,6 +24,14 @@ function App() {
         .then((response) => response.json())
         .then((data) => {
           setSelectedCountryData(data);
+          if (data.countryInfo) {
+            console.log(data.countryInfo.lat, data.countryInfo.long);
+            setLat(data.countryInfo.lat);
+            setLong(data.countryInfo.long);
+          } else {
+            setLat(0);
+            setLong(0);
+          }
         });
     })();
   }, [selectedCountry]);
@@ -58,6 +69,7 @@ function App() {
           countriesList={countriesList}
         />
         <CardsRow countryData={selectedCountryData} />
+        <CovidMap latitude={lat} longitude={long} />
       </div>
       <div className="app__right">
         <RankedTable countriesList={KsortByCases(countriesList)} />
@@ -65,6 +77,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

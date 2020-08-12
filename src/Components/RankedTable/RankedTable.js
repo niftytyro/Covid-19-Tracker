@@ -3,7 +3,7 @@ import { Typography } from "@material-ui/core";
 import styles from "./RankedTable.module.css";
 import { KformatWithComma } from "../../utils";
 
-function RankedTable({ countriesList }) {
+const RankedTable = ({ countriesList }) => {
   return (
     <div className={styles.tableContainer}>
       <Typography className={styles.header} variant="h5" color="textSecondary">
@@ -21,6 +21,6 @@ function RankedTable({ countriesList }) {
       </div>
     </div>
   );
-}
+};
 
 export default RankedTable;
