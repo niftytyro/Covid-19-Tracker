@@ -19,9 +19,9 @@ body {
 }
 
 .app__left {
-  flex: 0.7;
+  flex: 0.75;
 }
 
 .app__right {
-  flex: 0.3;
+  flex: 0.25;
 }
