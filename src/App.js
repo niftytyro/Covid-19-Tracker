@@ -48,6 +48,10 @@ const App = () => {
               country: country.country,
               countryCode: country.countryInfo.iso2,
               cases: country.cases,
+              deaths: country.deaths,
+              recovered: country.recovered,
+              lat: country.countryInfo.lat,
+              long: country.countryInfo.long,
             };
           });
           setCountriesList(countries);
@@ -69,7 +73,11 @@ const App = () => {
           countriesList={countriesList}
         />
         <CardsRow countryData={selectedCountryData} />
-        <CovidMap latitude={lat} longitude={long} />
+        <CovidMap
+          latitude={lat}
+          longitude={long}
+          countriesData={countriesList}
+        />
       </div>
       <div className="app__right">
         <RankedTable countriesList={KsortByCases(countriesList)} />
