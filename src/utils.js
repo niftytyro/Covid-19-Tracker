@@ -20,8 +20,9 @@ const KformatLargeNumbers = (number) => {
 };
 
 const KsortByCases = (countries) => {
-  countries.sort((a, b) => (a.cases < b.cases ? 1 : -1));
-  return countries;
+  const newCountries = [...countries];
+  newCountries.sort((a, b) => (a.cases < b.cases ? 1 : -1));
+  return newCountries;
 };
 
 const KformatWithComma = (number) => {

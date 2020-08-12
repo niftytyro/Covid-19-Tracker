@@ -3,6 +3,7 @@ import "./App.css";
 import AppHeader from "./Components/AppHeader/AppHeader";
 import CardsRow from "./Components/CardsRow/CardsRow";
 import RankedTable from "./Components/RankedTable/RankedTable";
+import Graph from "./Components/Graph/Graph";
 import { KsortByCases } from "./utils";
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
       </div>
       <div className="app__right">
         <RankedTable countriesList={KsortByCases(countriesList)} />
+        <Graph countryCode={selectedCountry} />
       </div>
     </div>
   );
