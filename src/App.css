@@ -25,5 +25,12 @@ body {
 
 .app__right {
   margin-right: 5px;
-  flex: 0.24;
+  flex: 0.23;
+  background-color: #ffffff;
+}
+
+@media (max-width: 1280px) {
+  .app {
+    flex-direction: column;
+  }
 }

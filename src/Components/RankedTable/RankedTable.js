@@ -8,16 +8,16 @@ function RankedTable({ countriesList }) {
       <Typography className={styles.header} variant="h5" color="textSecondary">
         Live Cases by Country
       </Typography>
-      <table>
-        {countriesList.map((country) => {
+      <div className={styles.table}>
+        {countriesList.map((country, index) => {
           return (
-            <tr>
+            <tr key={index}>
               <td>{country.country}</td>
               <td>{country.cases}</td>
             </tr>
           );
         })}
-      </table>
+      </div>
     </div>
   );
 }
