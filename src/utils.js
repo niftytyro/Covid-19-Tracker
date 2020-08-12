@@ -19,4 +19,13 @@ const KformatLargeNumbers = (number) => {
   return number;
 };
 
-export { KformatLargeNumbers };
+const KsortByCases = (countries) => {
+  countries.sort((a, b) => (a.cases < b.cases ? 1 : -1));
+  return countries;
+};
+
+const KformatWithComma = (number) => {
+  return number;
+};
+
+export { KformatLargeNumbers, KsortByCases, KformatWithComma };

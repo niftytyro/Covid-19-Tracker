@@ -21,12 +21,14 @@ body {
 .app__left {
   flex: 0.75;
   margin-left: 5px;
+  height: 100%;
 }
 
 .app__right {
   margin-right: 5px;
   flex: 0.23;
   background-color: #ffffff;
+  height: 100%;
 }
 
 @media (max-width: 1280px) {
