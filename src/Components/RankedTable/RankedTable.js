@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 import styles from "./RankedTable.module.css";
+import { KformatWithComma } from "../../utils";
 
 function RankedTable({ countriesList }) {
   return (
@@ -13,7 +14,7 @@ function RankedTable({ countriesList }) {
           return (
             <tr key={index}>
               <td>{country.country}</td>
-              <td>{country.cases}</td>
+              <td>{KformatWithComma(country.cases)}</td>
             </tr>
           );
         })}

@@ -25,7 +25,7 @@ const KsortByCases = (countries) => {
 };
 
 const KformatWithComma = (number) => {
-  return number;
+  return number.toLocaleString();
 };
 
 export { KformatLargeNumbers, KsortByCases, KformatWithComma };
