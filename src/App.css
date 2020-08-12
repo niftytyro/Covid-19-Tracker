@@ -14,14 +14,16 @@ body {
 
 .app {
   display: flex;
-  justify-content: space-evenly;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 20px 40px;
 }
 
 .app__left {
   flex: 0.75;
+  margin-left: 5px;
 }
 
 .app__right {
-  flex: 0.25;
+  margin-right: 5px;
+  flex: 0.24;
 }

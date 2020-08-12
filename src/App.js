@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import AppHeader from "./Components/AppHeader/AppHeader";
 import CardsRow from "./Components/CardsRow/CardsRow";
+import RankedTable from "./Components/RankedTable/RankedTable";
 
 function App() {
   const [countriesList, setCountriesList] = useState([]);
@@ -33,6 +34,7 @@ function App() {
             return {
               country: country.country,
               countryCode: country.countryInfo.iso2,
+              cases: country.cases,
             };
           });
           setCountriesList(countries);
@@ -55,7 +57,9 @@ function App() {
         />
         <CardsRow countryData={selectedCountryData} />
       </div>
-      <div className="app__right"></div>
+      <div className="app__right">
+        <RankedTable countriesList={countriesList} />
+      </div>
     </div>
   );
 }

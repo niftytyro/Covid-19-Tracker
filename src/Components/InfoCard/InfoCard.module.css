@@ -1,6 +1,6 @@
 .card {
-  flex: 1;
-  margin: 10px;
+  flex: 0 24%;
+  margin: 10px 0;
 }
 
 @media (max-width: 1280px) {

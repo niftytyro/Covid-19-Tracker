@@ -1,0 +1,9 @@
+.tableContainer {
+  background-color: #ffffff;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.header {
+  margin-bottom: 10px !important;
+}

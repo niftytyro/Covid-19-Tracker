@@ -8,7 +8,7 @@ function InfoCard({ title, color, casesToday, totalCases }) {
       <CardContent>
         <Typography color="textSecondary">{title}</Typography>
         <Typography style={{ color: color }} variant="h3">
-          {"+" + casesToday}
+          {casesToday}
         </Typography>
         <Typography color="textSecondary">{totalCases}</Typography>
       </CardContent>

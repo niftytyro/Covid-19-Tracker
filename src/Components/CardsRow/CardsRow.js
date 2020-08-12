@@ -9,20 +9,20 @@ function CardsRow({ countryData }) {
       <InfoCard
         title="Coronavirus Cases"
         color="#ff3333"
-        casesToday={KformatLargeNumbers(countryData.todayCases)}
-        totalCases={KformatLargeNumbers(countryData.cases)}
+        casesToday={"+" + KformatLargeNumbers(countryData.todayCases)}
+        totalCases={KformatLargeNumbers(countryData.cases) + " Total"}
       />
       <InfoCard
         title="Recovered"
         color="#55cc55"
-        casesToday={KformatLargeNumbers(countryData.todayRecovered)}
-        totalCases={KformatLargeNumbers(countryData.recovered)}
+        casesToday={"+" + KformatLargeNumbers(countryData.todayRecovered)}
+        totalCases={KformatLargeNumbers(countryData.recovered) + " Total"}
       />
       <InfoCard
         title="Deaths"
         color="#ff3333"
-        casesToday={KformatLargeNumbers(countryData.todayDeaths)}
-        totalCases={KformatLargeNumbers(countryData.deaths)}
+        casesToday={"+" + KformatLargeNumbers(countryData.todayDeaths)}
+        totalCases={KformatLargeNumbers(countryData.deaths) + " Total"}
       />
       <InfoCard
         title="Tests"
