@@ -1,11 +1,7 @@
 .tableContainer {
   border-radius: 5px;
   padding: 10px;
-  height: 350px;
-  overflow: auto;
-}
-.tableContainer::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 
 .header {
@@ -15,6 +11,11 @@
 .table {
   width: 100%;
   color: #5a4d4d;
+  height: 400px;
+  overflow: scroll;
+}
+.table::-webkit-scrollbar {
+  display: none;
 }
 
 .table tr td {
