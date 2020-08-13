@@ -1,4 +1,7 @@
 const KformatLargeNumbers = (number) => {
+  if (number == undefined) {
+    return 0;
+  }
   if (number >= 1000) {
     const factor = Math.pow(
       10,
@@ -6,6 +9,7 @@ const KformatLargeNumbers = (number) => {
     );
     let roundedNumber = number / factor;
     roundedNumber = Number(Math.round(roundedNumber + "e" + 1) + "e-" + 1);
+
     if (factor === 1000) {
       return roundedNumber + "K";
     }

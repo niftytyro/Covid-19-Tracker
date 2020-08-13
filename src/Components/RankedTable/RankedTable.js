@@ -2,6 +2,7 @@ import React from "react";
 import { Typography } from "@material-ui/core";
 import styles from "./RankedTable.module.css";
 import { KformatWithComma } from "../../utils";
+import { CSSTransitionGroup } from "react-transition-group";
 
 const RankedTable = ({ countriesList }) => {
   return (
@@ -13,8 +14,16 @@ const RankedTable = ({ countriesList }) => {
         {countriesList.map((country, index) => {
           return (
             <tr key={index}>
-              <td>{country.country}</td>
-              <td>{KformatWithComma(country.cases)}</td>
+              <CSSTransitionGroup
+                transitionName="slideUpLittle"
+                transitionAppear={true}
+                transitionAppearTimeout={500}
+                transitionEnter={false}
+                transitionLeave={false}
+              >
+                <td>{country.country}</td>
+                <td>{KformatWithComma(country.cases)}</td>
+              </CSSTransitionGroup>
             </tr>
           );
         })}

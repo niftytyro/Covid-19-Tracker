@@ -1,6 +1,7 @@
 import React from "react";
 import { Select, FormControl, MenuItem } from "@material-ui/core";
 import styles from "./AppHeader.module.css";
+import { CSSTransitionGroup } from "react-transition-group";
 
 const AppHeader = ({
   selectedCountry,
@@ -9,7 +10,15 @@ const AppHeader = ({
 }) => {
   return (
     <div className={styles.app__header}>
-      <h1>COVID-19 TRACKER</h1>
+      <CSSTransitionGroup
+        transitionName="slideUp"
+        transitionAppear={true}
+        transitionAppearTimeout={500}
+        transitionEnter={false}
+        transitionLeave={false}
+      >
+        <h1>Covid-19 Tracker</h1>
+      </CSSTransitionGroup>
       <FormControl>
         <Select
           className={styles.app__dropdown}

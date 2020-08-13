@@ -68,6 +68,25 @@ body {
   margin-top: 5px;
 }
 
+.slideUp-appear {
+  transform: translateY(30px);
+  opacity: 0.5;
+}
+.slideUp-appear.slideUp-appear-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.5s;
+}
+.slideUpLittle-appear {
+  transform: translateY(10px);
+  opacity: 0.5;
+}
+.slideUpLittle-appear.slideUpLittle-appear-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
 @media (max-width: 1280px) {
   .app {
     flex-direction: column;
