@@ -3,7 +3,7 @@
   margin: 10px 0;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1080px) {
   .card {
     flex: 0 95%;
   }

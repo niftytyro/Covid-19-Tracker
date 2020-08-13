@@ -10,3 +10,13 @@
   justify-content: space-between;
   margin: 10px 0;
 }
+
+@media (max-width: 1080px) {
+  .app__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .app__dropdown {
+    margin-top: 10px;
+  }
+}

@@ -31,6 +31,7 @@ body {
   flex: 0.23;
   background-color: #ffffff;
   height: 100%;
+  border-radius: 20px;
 }
 
 .leaflet-container {

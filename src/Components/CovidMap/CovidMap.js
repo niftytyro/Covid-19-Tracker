@@ -3,9 +3,10 @@ import { Map as LeafletMap, TileLayer, CircleMarker } from "react-leaflet";
 import styles from "./CovidMap.module.css";
 
 const CovidMarkers = (countriesData) => {
-  return countriesData.map((country) => {
+  return countriesData.map((country, index) => {
     return (
       <CircleMarker
+        key={index}
         center={[country.lat, country.long]}
         color="red"
         fillOpacity={0.4}
