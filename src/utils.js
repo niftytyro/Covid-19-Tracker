@@ -1,5 +1,5 @@
 const KformatLargeNumbers = (number) => {
-  if (number == undefined) {
+  if (number === undefined) {
     return 0;
   }
   if (number >= 1000) {
